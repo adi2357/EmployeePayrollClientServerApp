@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ajax_page_style.css">"
+    <title>Test Ajax Services and Promise</title>
+    <script src="../js/http_services.js"></script>
+</head>
+
+<body>
+    <h1>The Test Services Result</h1>
+    <div id="get_services"></div>
+    <div id="delete_services"></div>
+    <div id="post_services"></div>
+
+    <script>
+        const getElement = document.querySelector('#get_services');
+        const getURL = "http://127.0.0.1:3000/employee-payroll/1";
+        makeServiceCall("GET", getURL, true)
+            .then(responseText => getElement.textContent = "Get User Data: " + responseText)
+            .catch(error => getElement.textContent = "GET Error Status: " + JSON.stringify(error));
+
+        const deleteElement = document.querySelector('#delete_services');
+        const deleteURL = "http://127.0.0.1:3000/employee-payroll/5";
+        makeServiceCall("DELETE", deleteURL, false)
+            .then(responseText => deleteElement.textContent = "User Deleted: " + responseText)
+            .catch(error => deleteElement.textContent = "DELETE Error Status: " + JSON.stringify(error));
+
+        const postElement = document.querySelector('#post_services');
+        const postURL = "http://127.0.0.1:3000/employee-payroll";
+        const employeeData = {
+            "_name": "Akash Malya",
+            "_gender": "male",
+            "_profilePicture": "../assets/profile-images/Ellipse -3.png",
+            "_salary": "350000",
+            "_startDate": "2020-11-14T18:30:00.000Z",
+            "_note": "New employee",
+            "_departments": ["Sales", "Finance"]
+        };
+        makeServiceCall("POST", postURL, true, employeeData)
+            .then(responseText => postElement.textContent = "User Added : " + responseText)
+            .catch(error => postElement.textContent = "POST Error Status : " + JSON.stringify(error));
+    </script>
+</body>
+
+</html>

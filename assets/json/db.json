@@ -1,52 +1,73 @@
 {
-  "employee": [
+  "employee-payroll": [
     {
-      "name": "mohit kumar new",
-      "gender": "male",
-      "departMent": [
-        "HR"
+      "_name": "Alina",
+      "_gender": "female",
+      "_profilePicture": "../assets/profile-images/Ellipse -7.png",
+      "_salary": "500000",
+      "_startDate": "2015-12-31T18:30:00.000Z",
+      "_note": "Fifth Employee",
+      "_departments": [
+        "HR",
+        "Sales",
+        "Finance",
+        "Engineer",
+        "Others"
       ],
-      "salary": "30000",
-      "startDate": "1 Jan 2020",
-      "notes": "",
-      "id": 1604589551457,
-      "profileUrl": "../assets/profile-images/Ellipse 1.png"
+      "id": 1
     },
     {
-      "name": "mohit kumar test",
-      "gender": "male",
-      "departMent": [
+      "_name": "Max Talor",
+      "_gender": "male",
+      "_profilePicture": "../assets/profile-images/Ellipse -5.png",
+      "_salary": "300000",
+      "_startDate": "2019-12-31T18:30:00.000Z",
+      "_note": "Third Employee",
+      "_departments": [
         "HR"
       ],
-      "salary": "30000",
-      "startDate": "1 Jan 2020",
-      "notes": "",
-      "id": 1604589594363,
-      "profileUrl": "../assets/profile-images/Ellipse 1.png"
+      "id": 2
     },
     {
-      "name": "mohit",
-      "gender": "male",
-      "departMent": [
-        "HR"
+      "_name": "Ana",
+      "_gender": "female",
+      "_profilePicture": "../assets/profile-images/Ellipse -4.png",
+      "_salary": "400000",
+      "_startDate": "2018-05-31T18:30:00.000Z",
+      "_note": "Second Employee",
+      "_departments": [
+        "Sales",
+        "Finance"
       ],
-      "salary": "30000",
-      "startDate": "1 Jan 2020",
-      "notes": "",
-      "id": 1604589699566,
-      "profileUrl": "../assets/profile-images/Ellipse -3.png"
+      "id": 3
     },
     {
-      "name": "test",
-      "gender": "male",
-      "departMent": [
-        "HR"
+      "id": 4,
+      "_name": "Aditya Verma",
+      "_gender": "male",
+      "_profilePicture": "../assets/profile-images/Ellipse -5.png",
+      "_salary": "500000",
+      "_startDate": "2020-11-04T18:30:00.000Z",
+      "_note": "First Employee",
+      "_departments": [
+        "HR",
+        "Sales",
+        "Engineer",
+        "Others"
+      ]
+    },
+    {
+      "_name": "Akash Malya",
+      "_gender": "male",
+      "_profilePicture": "../assets/profile-images/Ellipse -3.png",
+      "_salary": "350000",
+      "_startDate": "2020-11-14T18:30:00.000Z",
+      "_note": "New employee",
+      "_departments": [
+        "Sales",
+        "Finance"
       ],
-      "salary": "30000",
-      "startDate": "1 Jan 2020",
-      "notes": "",
-      "id": 1604589731061,
-      "profileUrl": "../assets/profile-images/Ellipse -3.png"
+      "id": 5
     }
   ]
 }

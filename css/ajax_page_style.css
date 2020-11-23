@@ -1,0 +1,12 @@
+.body {
+    margin: auto;
+}
+
+div {
+    border: 1px solid black;
+    background-color: lightblue;
+    padding: 50px;
+    width: 80%;
+    font-size: x-large;
+    margin-top: 50px;
+}
