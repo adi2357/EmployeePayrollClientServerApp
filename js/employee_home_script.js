@@ -75,10 +75,18 @@ const remove = (node) => {
     let employeePayrollData = employeePayrollList.find(employeeData => employeeData.id == node.id);
     if (!employeePayrollData) return;
     const index = employeePayrollList.map(employeeData => employeeData.id).indexOf(employeePayrollData.id);
-    employeePayrollList.splice(index, 1);
-    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
-    document.querySelector(".emp-count").textContent = employeePayrollList.length;
-    createInnerHtml();
+    if (site_properties.use_local_storage.match("true")) {
+        employeePayrollList.splice(index, 1);
+        localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
+        document.querySelector(".emp-count").textContent = employeePayrollList.length;
+        createInnerHtml();
+    } else {
+        let methodType = "DELETE";
+        let deleteURL = site_properties.server_url + employeePayrollData.id.toString();
+        makeServiceCall(methodType, deleteURL, false)
+            .then(responseText => createInnerHtml())
+            .catch(error => console.log("DELETE Error Status: " + JSON.stringify(error)));
+    }
 };
 
 const update = (node) => {

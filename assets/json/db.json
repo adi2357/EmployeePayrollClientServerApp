@@ -68,34 +68,6 @@
         "Finance"
       ],
       "id": 5
-    },
-    {
-      "_name": "Mason Borne",
-      "_profilePicture": "../assets/profile-images/Ellipse -2.png",
-      "_gender": "male",
-      "_salary": "300000",
-      "_note": "Employee added json server",
-      "_startDate": "2020-10-31T18:30:00.000Z",
-      "_departments": [
-        "Others"
-      ],
-      "id": 6
-    },
-    {
-      "_name": "Alan Bisht",
-      "_profilePicture": "../assets/profile-images/Ellipse -3.png",
-      "_gender": "male",
-      "_salary": "500000",
-      "_note": "Employee updated...",
-      "_startDate": "2020-10-31T18:30:00.000Z",
-      "_departments": [
-        "HR",
-        "Sales",
-        "Finance",
-        "Engineer",
-        "Others"
-      ],
-      "id": 7
     }
   ]
 }
