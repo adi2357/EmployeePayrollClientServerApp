@@ -1,11 +1,6 @@
 class EmployeePayrollData {
 
-    get id() {
-        return this._id;
-    }
-    set id(id) {
-        this._id = id;
-    }
+    id;
 
     get name() {
         return this._name;
@@ -43,10 +38,10 @@ class EmployeePayrollData {
     }
     set startDate(startDate) {
         let now = new Date();
-        if (startDate > now) throw "Start Date is a Futute Date!"
+        if (startDate > now) throw "Start Date is a Futute Date!";
         let difference = Math.abs(now.getTime() - startDate.getTime());
         if (difference / (1000 * 60 * 60 * 24) > 30) {
-            throw "Start Date is beyond 30 days!"
+            throw "Start Date is beyond 30 days!";
         }
         this._startDate = startDate;
     }
