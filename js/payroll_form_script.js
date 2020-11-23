@@ -57,9 +57,13 @@ const save = (event) => {
     event.stopPropagation();
     try {
         setEmployeePayrollObject();
-        updateLocalStorage();
-        resetForm();
-        window.location.replace(site_properties.home_page);
+        if (site_properties.use_local_storage.match("true")) {
+            updateLocalStorage();
+            resetForm();
+            window.location.replace(site_properties.home_page);
+        } else {
+            updateJSONServer();
+        }
     } catch (submitError) {
         alert(submitError);
         resetForm();
@@ -98,6 +102,19 @@ const updateLocalStorage = () => {
     alert("Local Storage Updated Successfully!\nTotal Employees : " + employeePayrollList.length);
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
 }
+
+const updateJSONServer = () => {
+    let postURL = site_properties.server_url;
+    let methodCall = "POST";
+    makeServiceCall(methodCall, postURL, true, employeePayrollObject)
+        .then(responseText => {
+            resetForm();
+            window.location.replace(site_properties.home_page);
+        })
+        .catch(error => {
+            throw error;
+        });
+};
 
 const createEmployeeId = () => {
     let employeeId = localStorage.getItem("EmployeeID");
