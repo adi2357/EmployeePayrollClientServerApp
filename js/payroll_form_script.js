@@ -1,5 +1,6 @@
 let isUpdate = false;
-let employeePayrollObject = {};
+let employeePayrollObject;
+employeePayrollObject = {};
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -104,9 +105,14 @@ const updateLocalStorage = () => {
 }
 
 const updateJSONServer = () => {
-    let postURL = site_properties.server_url;
+    let url = site_properties.server_url;
     let methodCall = "POST";
-    makeServiceCall(methodCall, postURL, true, employeePayrollObject)
+    if (isUpdate) {
+        methodCall = "PUT";
+        url = url + employeePayrollObject.id.toString();
+
+    }
+    makeServiceCall(methodCall, url, true, employeePayrollObject)
         .then(responseText => {
             resetForm();
             window.location.replace(site_properties.home_page);

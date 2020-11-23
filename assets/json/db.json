@@ -83,12 +83,15 @@
     },
     {
       "_name": "Alan Bisht",
-      "_profilePicture": "../assets/profile-images/Ellipse -5.png",
+      "_profilePicture": "../assets/profile-images/Ellipse -3.png",
       "_gender": "male",
-      "_salary": "400000",
-      "_note": "Employee added to redirect ",
-      "_startDate": "2020-11-14T18:30:00.000Z",
+      "_salary": "500000",
+      "_note": "Employee updated...",
+      "_startDate": "2020-10-31T18:30:00.000Z",
       "_departments": [
+        "HR",
+        "Sales",
+        "Finance",
         "Engineer",
         "Others"
       ],
